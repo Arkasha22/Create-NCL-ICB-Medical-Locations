@@ -1,7 +1,7 @@
-##APIs Ingestion file created by Donald Maruta, Senior Geospatial Manager, NCL ICB, 20 Jul 23
-
+##Created NCL ICB Medical Locations created by Donald Maruta - 20 Jul 23
 #Web Address: https://api.nhs.uk/service-search/search
 
+#Connect to AGOL
 from arcgis.gis import GIS
 gis = GIS("home")
 
@@ -101,6 +101,7 @@ csv_file_paths = [
     #Add more file paths as needed
 ]
 
+#Import Data from NHS Digital
 for dataset, csv_file_path in zip(datasets, csv_file_paths):
     response = requests.request(
         method='POST',
@@ -288,7 +289,6 @@ for i, chuck in enumerate(rows):
     chuck.to_csv('/arcgis/home/OT{}.csv'.format(i)) #i is for chunk number of each iteration
 
 ##Loop through Opening Times
-
 OTlist = ["OT0.csv", "OT1.csv", "OT2.csv", "OT3.csv", "OT4.csv", "OT5.csv", "OT6.csv", "OT7.csv"]
 length = len(OTlist)
 
