@@ -5,7 +5,7 @@ Web Address: https://api.nhs.uk/service-search/search
 
 Python code designed to be run in ArcGIS OnLine Notebook
 
-This allows users to create all Medical Facilities within NCL ICB and export them as Web Map Servies.
+This allows users to create all Medical Facilities within NCL ICB and export them as Web Map Services.
 
 It carries out the following actions in the following order
  - Connect to AGOL
